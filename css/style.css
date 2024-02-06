@@ -1,0 +1,373 @@
+:root {
+    --pale-violet:hsl(276, 100%, 81%);
+    --mod-violet:hsl(276, 55%, 52%);
+    --ddviolet:hsl(271, 15%, 43%);
+    --gblue:hsl(206, 6%, 79%);
+    --vddviolet:hsl(271, 36%, 24%);
+    --dgviolet:hsl(270, 7%, 64%);
+    /* gradient */
+    --lmagenta:hsl(293, 100%, 63%);
+    --lviolet:hsl(264, 100%, 61%);
+
+    --white:hsl(0, 0%, 100%);
+    --lgviolet:hsl(270, 20%, 96%);
+    --lgchat:hsl(280, 50%, 90%);
+    --vddviolet:hsl(271, 36%, 24%);
+    --vlmagenta:hsl(289, 100%, 72%);
+
+    --copy: 16px;
+
+}
+/* - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+- Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+- Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+- Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+- Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+- Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
+
+#### Gradients
+
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+- Light Magenta: hsl(293, 100%, 63%)
+- Light Violet: hsl(264, 100%, 61%)
+
+### Secondary
+
+- White: hsl(0, 0%, 100%)
+- Light Grayish Violet (app background): hsl(270, 20%, 96%)
+- Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%)
+- Very Light Magenta (radio button outline): hsl(289, 100%, 72%) */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--lgviolet); 
+    font-family: Rubik;
+}
+
+p {
+    color: var(--dgviolet);
+}
+
+.bg-left {
+    width: 500px; /* Set your desired width */
+    height: 1000px; /* Set your desired height */
+    background: linear-gradient(180deg, var(--lmagenta), var(--lviolet)); 
+    border-radius: 250px; /* Set half of the height to create a pill shape */
+    position: absolute;
+    z-index: -99;
+    left: -80px;
+    margin: 0;
+    top: -300px;
+}
+
+.bg-right {
+    width: 500px; /* Set your desired width */
+    height: 1000px; /* Set your desired height */
+    background: var(--lgchat); 
+    border-radius: 250px; /* Set half of the height to create a pill shape */
+    position: absolute;
+    z-index: -99;
+    right: -170px;
+    margin: 0;
+    top: 400px;
+    opacity: 0.5;
+}
+
+main {
+    margin: auto;
+    margin-top: 140px;
+    margin-left: 360px;
+    display: flex;
+    font-size: 8px;
+    gap: 120px;
+}
+
+.phone {
+    margin: auto;
+    border-radius: 25px;
+    width: 230px;
+    height: 480px;
+    border: 10px solid var(--white);
+    background-color: var(--lgviolet);
+    display: flex;
+    flex-direction: column;
+    line-height: 12px;
+}
+
+.notch {
+    width: 120px;
+    align-self: top;
+    height: 18px;
+    background-color: var(--white);
+    border-radius: 0 0 12px 12px ;
+    margin: auto;
+}
+
+.avatar {
+    width: 20px;
+    background-color: var(--white);
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.header {
+    background: linear-gradient(-90deg, var(--lmagenta), var(--lviolet)); 
+    flex-direction: row;
+    border-radius: 12px 12px 8px 8px;
+    color: var(--lgviolet);
+    margin-bottom: 12px;
+}
+
+.head-menu {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.left {
+    margin-right: 4px; /* Adjust spacing as needed */
+    padding-left: 5px;
+  }
+  
+  .detail {
+    margin-right: 10px; /* Adjust spacing as needed */
+    padding: 4px;
+  }
+  
+  .three-dot {
+    margin-left: auto; /* Push the three-dot section to the right */
+    padding-right: 10px;
+  }
+  
+  .three-dot ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    gap: 4px; /* Adjust the gap between dots */
+    flex-direction: column;
+  }
+  
+  .three-dot ul li {
+    width: 2px; /* Set the width of each dot */
+    height: 2px; /* Set the height of each dot */
+    background-color: var(--white); /* Set the color of each dot */
+    border-radius: 50%; /* Make each dot circular */
+  }  
+
+.username, .status {
+    font-size: 8px;
+    margin: 0;
+}
+
+.status {
+    color: var(--pale-violet);
+}
+
+.photos {
+    gap: 5px;
+}
+
+.photos img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.message, .reply {
+    padding: 4px 0;
+    margin: 6px;
+    width: fit-content;
+    max-width: 127px;
+    border-radius: 8px;
+}
+
+.message {
+    background-color: var(--lgchat);
+}
+
+.reply {
+    background-color: var(--white);
+    margin-left: auto;
+}
+
+.message p, .reply p {
+    margin: 0 8px;
+}
+
+.message p {
+    color: var(--mod-violet);
+}
+
+.reply p {
+    color: var(--ddviolet);
+    text-align: right;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.photos {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+.price-wrap {
+    width: 160px;
+    height: 30px;
+    background: linear-gradient(90deg, var(--lmagenta), var(--lviolet)); 
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    border-radius:  12px 12px 12px 4px;
+    padding: 0 4px;
+}
+
+article {
+    width: 450px;
+    margin:  auto ;
+
+}
+
+article .title {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--vddviolet);
+}
+
+article .description {
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    /* Hide the default radio button */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Define custom styles */
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--vlmagenta); /* Set white border */
+    border-radius: 50%; /* Make it round */
+    background: transparent;
+    background-color: transparent; /* Set transparent background */
+    color: transparent;
+    cursor: pointer; /* Add cursor pointer */
+    margin: auto 5px;
+  }
+
+  .radio-label{
+    color: var(--lgviolet);
+    margin: auto;
+    margin-left:0;
+  }
+  
+  /* Style the radio button when checked */
+input[type="radio"]:checked {
+    background-color: var(--lgchat); /* Change background color when checked */
+  }
+
+  .price {
+    font-size: 12px;
+    color: var(--white);
+    margin: auto 10px;
+  }
+
+input[type="text"] {
+    font-size: 10px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+input[type="text"]::placeholder {
+    color: var(--gblue); /* Set the placeholder color to gray */
+  }
+  
+
+.type-input {
+    display: flex;
+    align-items: flex-start;
+    position: relative; 
+    bottom: 0;
+    margin: auto 5px;
+    margin-bottom: 10px;
+  }
+  
+  .type-input input[type="text"] {
+    flex: 1; /* Take remaining space */
+  }
+  
+  .type-input button {
+    margin: auto;
+    right: 0;/* Align button to the top */
+    position: absolute;
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    background-color: var(--vddviolet);
+    color: var(--white);
+    text-align: center;
+    margin-right: 6px;
+  }
+
+  .description {
+    line-height: 1.8em;
+  }
+
+
+@media screen and (max-width: 800px) {
+    body {
+        
+    }
+    .background {
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    main {
+        flex-direction: column;
+        margin: auto 0;
+        gap: 40px;
+    }
+    .bg-left {
+        position: absolute;
+        top: -840px;
+        left: -320px;
+    }
+
+    .bg-right {
+        top: 140px;  
+        left: 190px;  
+        overflow: hidden;    
+    }
+
+    .phone {
+        margin: auto;
+        margin-top: 60px;
+        left: 20px;
+    }
+
+    .copy {
+        width: 360px;
+        margin:  auto 20px;
+        text-align: center;
+        
+    }
+    .description {
+        margin: 8px 28px;
+    }
+}
