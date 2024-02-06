@@ -46,7 +46,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: var(--lgviolet); 
+    background-color: var(--white); 
     font-family: Rubik;
 }
 
@@ -69,14 +69,13 @@ p {
 .bg-right {
     width: 500px; /* Set your desired width */
     height: 1000px; /* Set your desired height */
-    background: var(--lgchat); 
+    background: var(--lgviolet); 
     border-radius: 250px; /* Set half of the height to create a pill shape */
     position: absolute;
     z-index: -99;
     right: -170px;
     margin: 0;
     top: 400px;
-    opacity: 0.5;
 }
 
 main {
@@ -98,6 +97,7 @@ main {
     display: flex;
     flex-direction: column;
     line-height: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .notch {
